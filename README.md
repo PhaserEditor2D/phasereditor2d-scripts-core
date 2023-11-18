@@ -1,6 +1,8 @@
 # Basic Phaser Editor 2D script nodes
 
-This project contains a couple of Script Nodes for Phaser Editor 2D.
+This project contains the main scripts to use with a Phaser Editor 2D project.
+
+It includes the basic script nodes and user components, especially, the `ScriptNode` and `UserComponent` classes.
 
 These script nodes are very basic and may fit on any Phaser Editor 2D project.
 
@@ -8,25 +10,35 @@ The scripts are coded in TypeScript with ES modules.
 
 ## Installing
 
-Copy this project folder (or clone the repo) and paste it into your project's `src/` folder.
-
 Install this package in your game:
 
 ```
 npm install @phasereditor2d/scripts-core
 ```
 
+Also, you should add this package to the `phasereditor2d.config.json` file in your project, in the `scripts` section:
+
+```json
+{
+    "scripts": ["@phasereditor2d/scripts-code"]
+}
+```
+
 ## Summary
 
 There are three groups of scripts: **Base**, **Triggers**, and **Actions**.
 
+## User components
+
+This package provides the `UserComponent` class. You may use it as the base class for all the user components of your game.
+
 ### Base scripts
 
-Contain basic/abstract functionallity. Often, you will create prefab variants of them (extend them).
+Contains basic/abstract functionality. Often, you will create prefab variants of them (extend them).
 
 * **ScriptNode** - the base class for all the scripts.
 * **SpriteScriptNode** - base prefab for script nodes accessing sprite objects.
-* **RootScriptNode** - a script node that registers itself into the game object and can be used as container of other scripts.
+* **RootScriptNode** - a script node that registers itself into the game object and can be used as a container of other scripts.
 
 ### Trigger scripts
 
