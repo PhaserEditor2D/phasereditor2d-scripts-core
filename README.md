@@ -42,14 +42,14 @@ Contains basic/abstract functionality. Often, you will create prefab variants of
 
 ### Trigger scripts
 
-These scripts listen certain event. When the event is triggered, then execute the children, which are actions.
+These scripts listen to certain events. When the event is triggered, then execute the children, which are actions.
 
-* **OnEventScript** - registers to the given `eventEmitter` and listens the given `eventName` event.
-* **OnPointerDownScript** - listens the `pointerdown` event of the game object.
+* **OnEventScript** - registers to the given `eventEmitter` and listens to the given `eventName`` event.
+* **OnPointerDownScript** - listens to the `pointerdown` event of the game object.
 
 ### Action scripts
 
-Actions are script that are executed manually or by other nodes, like triggers or other actions.
+Actions are scripts that are executed manually or by other nodes, like triggers or other actions.
 
 * **CallbackActionScript** - executes the given `callback` expression.
 * **StartSceneActionScript** - starts the given `sceneKey` scene.
@@ -58,13 +58,13 @@ Actions are script that are executed manually or by other nodes, like triggers o
 
 ## ScriptNode
 
-The base of all the scripts. Probably it is already avaliable in your project (if you generated it with Phaser Editor 2D).
+The base of all the scripts. Probably it is already available in your project (if you generated it with Phaser Editor 2D).
 
 This class provides methods for managing the node's children, and implementing the scene events: `awake`, `start`, and `update`.
 
 ## SpriteScriptNode
 
-A base script for all the scripts accesing sprite objects. It just overrides the `gameObject` property and set its type to `Phaser.GameObjects.Sprite`. This helps IDE auto-completion and type-checking.
+A base script for all the scripts accessing sprite objects. It just overrides the `gameObject` property and sets its type to `Phaser.GameObjects.Sprite`. This helps IDE auto-completion and type-checking.
 
 ## RootScriptNode
 
@@ -76,7 +76,7 @@ When you create a **RootScriptNode**, it registers itself to the game object in 
 gameObject["RootScript__scripts"] = this;
 ```
 
-You can use the `key` parameter to register the root script node using other attribute. If the `key` parameter is `"anotherScripts"`, then it register the root node like this:
+You can use the `key` parameter to register the root script node using another attribute. If the `key` parameter is `"anotherScripts"`, then it registers the root node like this:
 
 ```
 gameObject["RootScript__anotherScripts"] = this;
@@ -125,9 +125,9 @@ You can select an `eventEmitter` from the following list:
 
 ## OnPointerDownScript
 
-A trigger-like script. It is a prefab variant of the `OnEventScript` node. It listens to the `pointerdown` event of the game object, and executes the children action nodes.
+A trigger-like script. It is a prefab variant of the `OnEventScript` node. It listens to the `pointerdown` event of the game object, and executes the children's action nodes.
 
-If the game object's input is not set whe the scene "awakes", then this script calls the `gameObject.setInteractive()` method.
+If the game object's input is not set when the scene "awakes", then this script calls the `gameObject.setInteractive()` method.
 
 ## CallbackActionScript
 
@@ -151,7 +151,7 @@ So, you can use different **ExecActionScript** nodes in different contexts, but 
 
 ## EmitEventActionScript
 
-An action like script. It calls the emit method of the given `eventEmitter` with the given `eventName`. As argument of the event it uses the argument received in the `execute()` method.
+An action like script. It calls the emit method of the given `eventEmitter` with the given `eventName`. As an argument of the event, it uses the argument received in the `execute()` method.
 
 Like in the **OnEventScript**, you can select an `eventEmitter` from a list:
 
