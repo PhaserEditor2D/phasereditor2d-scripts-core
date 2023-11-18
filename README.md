@@ -91,7 +91,7 @@ const script = RootScriptNode.getRoot(someGameObject);
 const otherScript = RootScriptNode.getRoot(someGameObject, "anotherScripts");
 ```
 
-The static `hasRoot()` method tells if the game object as a root script:
+The static `hasRoot()` method tells if the game object is a root script:
 
 ```
 if (RootScriptNode.hasRoot(gameObject, "myScripts")) {
@@ -99,7 +99,7 @@ if (RootScriptNode.hasRoot(gameObject, "myScripts")) {
 }
 ```
 
-The static `getChildren()` method returns the chidlren of the root script:
+The static `getChildren()` method returns the children of the root script:
 
 ```
 const children = RootScriptNode.getChildren(gameObject, "myScripts");
