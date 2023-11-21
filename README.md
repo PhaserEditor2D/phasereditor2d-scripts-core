@@ -26,7 +26,7 @@ Also, you should add this package to the `phasereditor2d.config.json` file in yo
 
 ## Summary
 
-There are three groups of scripts: **Base**, **Triggers**, and **Actions**.
+There are three groups of scripts: **Base**, **Event**, and **Action**.
 
 ## User components
 
@@ -40,11 +40,11 @@ Contains basic/abstract functionality. Often, you will create prefab variants of
 * **SpriteScriptNode** - base prefab for script nodes accessing sprite objects.
 * **RootScriptNode** - a script node that registers itself into the game object and can be used as a container of other scripts.
 
-### Trigger scripts
+### Event scripts
 
-These scripts listen to certain events. When the event is triggered, then execute the children, which are actions.
+These scripts listen to certain events. When the event is emitted, then executes the children, which are actions.
 
-* **OnEventScript** - registers to the given `eventEmitter` and listens to the given `eventName`` event.
+* **OnEventScript** - registers to the given `eventEmitter` and listens to the given `eventName` event.
 * **OnPointerDownScript** - listens to the `pointerdown` event of the game object.
 
 ### Action scripts
@@ -55,6 +55,9 @@ Actions are scripts that are executed manually or by other nodes, like triggers 
 * **StartSceneActionScript** - starts the given `sceneKey` scene.
 * **ExecActionScript** - executes the given `targetAction`.
 * **EmitEventActionScript** - the given `eventEmitter` emits the given `eventName`.
+* **AlertActionScript** - shows the browser's alert dialog, with the given `message`.
+* **ConsoleLogActionScript** - logs the given `message` to the browser's console.
+* **DestroyActionScript** - destroys the game object.
 
 ## ScriptNode
 
@@ -109,7 +112,7 @@ You can create variants of the **RootScriptNode** and use different keys.
 
 ## OnEventScript
 
-A trigger-like script node. It registers to the given `eventEmitter` and listens the given `eventName`. When the event is fired, it executes the children action nodes. 
+An event script node. It registers to the given `eventEmitter` and listens to the given `eventName``. When the event is fired, it executes the children's action nodes. 
 
 You can create handy prefab variants for different events, like the `OnPointerDownScript` prefab.
 
@@ -125,21 +128,21 @@ You can select an `eventEmitter` from the following list:
 
 ## OnPointerDownScript
 
-A trigger-like script. It is a prefab variant of the `OnEventScript` node. It listens to the `pointerdown` event of the game object, and executes the children's action nodes.
+An event script. It is a prefab variant of the `OnEventScript` node. It listens to the `pointerdown` event of the game object and executes the children's action nodes.
 
 If the game object's input is not set when the scene "awakes", then this script calls the `gameObject.setInteractive()` method.
 
 ## CallbackActionScript
 
-An action-like script. It executes the given `callback` expression. You can use this script for executing custom methods from your prefabs or scenes.
+An action script. It executes the given `callback` expression. You can use this script for executing custom methods from your prefabs or scenes.
 
 ## StartSceneActionScript
 
-An action-like script. It starts the given `sceneKey` scene.
+An action script. It starts the given `sceneKey` scene.
 
 ## ExecActionScript
 
-An action-like script. It executes the given `targetAction`. You can use this script for executing an action node from script-tree.
+An action script. It executes the given `targetAction`. You can use this script for executing an action node from script-tree.
 
 For example, let's say you have a **JumpAction** for jumping a character. But you want to call this action when different events are fired:
 
@@ -151,7 +154,7 @@ So, you can use different **ExecActionScript** nodes in different contexts, but 
 
 ## EmitEventActionScript
 
-An action like script. It calls the emit method of the given `eventEmitter` with the given `eventName`. As an argument of the event, it uses the argument received in the `execute()` method.
+An action script. It calls the emit method of the given `eventEmitter` with the given `eventName`. As an argument of the event, it uses the argument received in the `execute()` method.
 
 Like in the **OnEventScript**, you can select an `eventEmitter` from a list:
 
@@ -162,3 +165,15 @@ Like in the **OnEventScript**, you can select an `eventEmitter` from a list:
 * `scene.input.keyboard`
 * `scene.anims`
 * `gameObject` (by default)
+
+## AlertActionScript
+
+An action script that shows the given `message` in the browser's Alert dialog.
+
+## ConsoleLogActionScript
+
+An action script that logs the given `message` in the browser's console.
+
+## DestroyActionScript
+
+An action script that destroys the game object.
