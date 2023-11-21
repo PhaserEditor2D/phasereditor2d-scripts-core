@@ -8,4 +8,5 @@ export { default as OnPointerDownScript } from "./OnPointerDownScript";
 export { default as RootScriptNode } from "./RootScriptNode";
 export { default as SpriteScriptNode } from "./SpriteScriptNode";
 export { default as StartSceneActionScript } from "./StartSceneActionScript";
+export { default as OnAwakeScript } from "./OnAwakeScript";
 
