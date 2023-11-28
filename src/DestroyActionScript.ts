@@ -21,7 +21,7 @@ export default class DestroyActionScript extends ScriptNode {
 	/* START-USER-CODE */
 
 	execute(...args: any[]): void {
-		
+
 		this.gameObject?.destroy();
 	}
 

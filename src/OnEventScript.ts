@@ -18,7 +18,7 @@ export default class OnEventScript extends ScriptNode {
 	}
 
 	public eventName: string = "";
-	public eventEmitter: "game.events"|"scene.events"|"scene.loader"|"scene.input"|"scene.input.keyboard"|"scene.anims"|"gameObject" = "gameObject";
+	public eventEmitter: "game.events"|"scene.events"|"scene.loader"|"scene.input"|"scene.input.keyboard"|"scene.anims"|"scene.physics.world"|"gameObject" = "gameObject";
 	public once: boolean = false;
 
 	/* START-USER-CODE */
@@ -58,6 +58,11 @@ export default class OnEventScript extends ScriptNode {
 				emitter = this.scene.anims;
 				break;
 
+			case "scene.physics.world":
+
+				emitter = this.scene.physics.world;
+				break;
+
 			case "gameObject":
 
 				emitter = this.gameObject;
@@ -81,6 +86,7 @@ export default class OnEventScript extends ScriptNode {
 				case "scene.input":
 				case "scene.input.keyboard":
 				case "scene.loader":
+				case "scene.physics.world":
 
 					this.scene.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
 

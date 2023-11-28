@@ -23,7 +23,7 @@ export default class AlertActionScript extends ScriptNode {
 	/* START-USER-CODE */
 
 	execute(...args: any[]): void {
-		
+
 		alert(this.message);
 	}
 

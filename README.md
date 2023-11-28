@@ -37,8 +37,8 @@ This package provides the `UserComponent` class. You may use it as the base clas
 Contains basic/abstract functionality. Often, you will create prefab variants of them (extend them).
 
 * **ScriptNode** - the base class for all the scripts.
-* **SpriteScriptNode** - base prefab for script nodes accessing sprite objects.
-* **RootScriptNode** - a script node that registers itself into the game object and can be used as a container of other scripts.
+* **SpriteScript** - base prefab for script nodes accessing sprite objects.
+* **RootScript** - a script node that registers itself into the game object and can be used as a container of other scripts.
 
 ### Event scripts
 
@@ -65,15 +65,15 @@ The base of all the scripts. Probably it is already available in your project (i
 
 This class provides methods for managing the node's children, and implementing the scene events: `awake`, `start`, and `update`.
 
-## SpriteScriptNode
+## SpriteScript
 
 A base script for all the scripts accessing sprite objects. It just overrides the `gameObject` property and sets its type to `Phaser.GameObjects.Sprite`. This helps IDE auto-completion and type-checking.
 
-## RootScriptNode
+## RootScript
 
 A base script that you can use to register the script node into the game object. In this way you can access the scripts associated to a game object.
 
-When you create a **RootScriptNode**, it registers itself to the game object in this way:
+When you create a **RootScript**, it registers itself to the game object in this way:
 
 ```
 gameObject["RootScript__scripts"] = this;
@@ -85,19 +85,19 @@ You can use the `key` parameter to register the root script node using another a
 gameObject["RootScript__anotherScripts"] = this;
 ```
 
-The **RootScriptNode** class contains utility methods for accessing the root script of a game object.
+The **RootScript** class contains utility methods for accessing the root script of a game object.
 
 The static `getRoot()` method can be used for getting the root script:
 
 ```
-const script = RootScriptNode.getRoot(someGameObject);
-const otherScript = RootScriptNode.getRoot(someGameObject, "anotherScripts");
+const script = RootScript.getRoot(someGameObject);
+const otherScript = RootScript.getRoot(someGameObject, "anotherScripts");
 ```
 
 The static `hasRoot()` method tells if the game object is a root script:
 
 ```
-if (RootScriptNode.hasRoot(gameObject, "myScripts")) {
+if (RootScript.hasRoot(gameObject, "myScripts")) {
     ....
 }
 ```
@@ -105,10 +105,10 @@ if (RootScriptNode.hasRoot(gameObject, "myScripts")) {
 The static `getChildren()` method returns the children of the root script:
 
 ```
-const children = RootScriptNode.getChildren(gameObject, "myScripts");
+const children = RootScript.getChildren(gameObject, "myScripts");
 ```
 
-You can create variants of the **RootScriptNode** and use different keys.
+You can create variants of the **RootScript** and use different keys.
 
 ## OnEventScript
 

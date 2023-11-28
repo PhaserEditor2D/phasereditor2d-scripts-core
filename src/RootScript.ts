@@ -8,7 +8,7 @@ import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class RootScriptNode extends ScriptNode {
+export default class RootScript extends ScriptNode {
 
 	constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene) {
 		super(parent);
@@ -32,7 +32,7 @@ export default class RootScriptNode extends ScriptNode {
 	 */
 	static getRoot(gameObject: Phaser.GameObjects.GameObject, key = "scripts") {
 
-		return (gameObject as any)[`RootScript__${key}`] as RootScriptNode;
+		return (gameObject as any)[`RootScript__${key}`] as RootScript;
 	}
 
 	/**
