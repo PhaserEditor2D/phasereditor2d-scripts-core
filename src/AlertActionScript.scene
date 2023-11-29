@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayFormat": "Alert \"${message}\"",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

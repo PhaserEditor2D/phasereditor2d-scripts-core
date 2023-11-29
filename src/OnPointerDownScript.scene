@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayFormat": "On pointer down",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -19,10 +20,7 @@
                 "eventName"
             ],
             "label": "objectEventTrigger",
-            "eventName": "pointerdown",
-            "components": [],
-            "nestedPrefabs": [],
-            "list": []
+            "eventName": "pointerdown"
         }
     ],
     "plainObjects": [],
@@ -30,6 +28,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

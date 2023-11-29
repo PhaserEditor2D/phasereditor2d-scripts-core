@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayFormat": "Destroy object",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

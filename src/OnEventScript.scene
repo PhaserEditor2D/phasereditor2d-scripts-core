@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayFormat": "On \"${eventName}\"",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
