@@ -5,6 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Start \"${sceneKey}\" scene",
+        "displayName": "Start Scene Action Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

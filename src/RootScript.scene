@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayName": "Root Base Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

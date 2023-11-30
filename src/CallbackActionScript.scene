@@ -5,6 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Callback \"${callback}\"",
+        "displayName": "Callback Action Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

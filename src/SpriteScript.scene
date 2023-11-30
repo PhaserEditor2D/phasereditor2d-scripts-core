@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "displayName": "Sprite Base Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -15,9 +16,7 @@
         {
             "type": "ScriptNode",
             "id": "dd5dd8bd-a139-4f92-b6d6-02f0e2dd1c38",
-            "label": "scriptnode_1",
-            "components": [],
-            "list": []
+            "label": "scriptnode_1"
         }
     ],
     "plainObjects": [],
@@ -25,6 +24,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

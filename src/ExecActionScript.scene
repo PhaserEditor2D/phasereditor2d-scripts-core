@@ -5,6 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Exec \"${targetAction}\"",
+        "displayName": "Exec Action Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
