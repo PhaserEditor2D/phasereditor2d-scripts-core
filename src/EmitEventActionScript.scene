@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Emit \"${eventName}\"",
-        "displayName": "Emit Event Action Script",
+        "displayName": "Emit Event Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

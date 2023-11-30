@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "On Awake",
-        "displayName": "On Awake Event Script",
+        "displayName": "On Awake Event",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

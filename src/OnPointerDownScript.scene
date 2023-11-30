@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "On pointer down",
-        "displayName": "On Pointer Down' Event Script",
+        "displayName": "On Pointer Down Event",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

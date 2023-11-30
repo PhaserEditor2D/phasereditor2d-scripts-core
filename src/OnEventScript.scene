@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "On \"${eventName}\"",
-        "displayName": "On Event Script",
+        "displayName": "On General Event",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

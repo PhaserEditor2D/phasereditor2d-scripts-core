@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Destroy object",
-        "displayName": "Destroy Object Action Script",
+        "displayName": "Destroy Object Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

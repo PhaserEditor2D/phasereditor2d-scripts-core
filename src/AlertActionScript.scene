@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Alert \"${message}\"",
-        "displayName": "Alert Action Script",
+        "displayName": "Alert Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

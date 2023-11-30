@@ -5,7 +5,7 @@
         "exportClass": true,
         "autoImport": true,
         "prefabObjDisplayFmt": "Log \"${message}\"",
-        "displayName": "Log Action Script",
+        "displayName": "Console Log Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
