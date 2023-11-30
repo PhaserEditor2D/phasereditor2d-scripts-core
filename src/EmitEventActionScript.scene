@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "displayFormat": "Emit \"${eventName}\"",
+        "prefabObjDisplayFmt": "Emit \"${eventName}\"",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

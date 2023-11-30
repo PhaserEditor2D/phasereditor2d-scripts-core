@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "displayFormat": "On pointer down",
+        "prefabObjDisplayFmt": "On pointer down",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

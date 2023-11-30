@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "displayFormat": "Start \"${sceneKey}\" scene",
+        "prefabObjDisplayFmt": "Start \"${sceneKey}\" scene",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

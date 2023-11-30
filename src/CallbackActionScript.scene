@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "displayFormat": "Callback \"${callback}\"",
+        "prefabObjDisplayFmt": "Callback \"${callback}\"",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",

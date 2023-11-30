@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "displayFormat": "Destroy object",
+        "prefabObjDisplayFmt": "Destroy object",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
