@@ -12,7 +12,12 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "tsc --watch",
 		"clean": "rm -Rf out/* && rm -Rf types/*",
-		"build": "tsc"
+		"build": "npm run clean && tsc",
+		"publish": "npm run build && npm publish --access=public",
+		"publish-local": "npm run build && npm publish --access=public --registry http://localhost:4873/",
+		"patch-alpha": "npm version prerelease --preid=alpha --no-git-tag-version",
+		"publish-alpha": "npm run build && npm publish --tag alpha --access=public",
+		"publish-alpha-local": "npm run build && npm publish --tag alpha --access=public --registry http://localhost:4873/"
 	},
 	"keywords": [
 		"scripts",
