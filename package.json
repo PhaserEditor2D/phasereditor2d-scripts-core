@@ -11,13 +11,15 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "tsc --watch",
+		"prestart": "npm run clean",
 		"clean": "rm -Rf out/* && rm -Rf types/*",
-		"build": "npm run clean && tsc",
-		"publish": "npm run build && npm publish --access=public",
+		"build": "tsc",
+		"prebuild": "npm run clean",
+		"prepare": "npm run build",
 		"publish-local": "npm run build && npm publish --access=public --registry http://localhost:4873/",
 		"patch-alpha": "npm version prerelease --preid=alpha --no-git-tag-version",
-		"publish-alpha": "npm run build && npm publish --tag alpha --access=public",
-		"publish-alpha-local": "npm run build && npm publish --tag alpha --access=public --registry http://localhost:4873/"
+		"publish-alpha": "npm publish --tag alpha",
+		"publish-alpha-local": "npm publish --tag alpha --registry http://localhost:4873/"
 	},
 	"keywords": [
 		"scripts",
