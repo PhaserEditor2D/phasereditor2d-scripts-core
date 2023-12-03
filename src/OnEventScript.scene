@@ -4,7 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "prefabObjDisplayFmt": "On \"${eventName}\"",
+        "prefabObjDisplayFmt": "On \"${eventName}\" #{once}",
         "displayName": "On General Event",
         "preloadMethodName": "",
         "preloadPackFiles": [],
