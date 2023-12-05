@@ -45,6 +45,7 @@ Contains basic/abstract functionality. Often, you will create prefab variants of
 These scripts listen to certain events. When the event is emitted, then executes the children, which are actions.
 
 * **OnEventScript** - registers to the given `eventEmitter` and listens to the given `eventName` event.
+* **OnAwakeEventScript** - listens to the `scene-awake` event of the scene.
 * **OnPointerDownScript** - listens to the `pointerdown` event of the game object.
 
 ### Action scripts
