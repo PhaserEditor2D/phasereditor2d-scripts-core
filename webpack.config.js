@@ -15,6 +15,7 @@ module.exports = {
         phaser: "Phaser"
     },
     optimization: {
-        minimize: false
+        minimize: false,
+        concatenateModules: true
     }
 };
