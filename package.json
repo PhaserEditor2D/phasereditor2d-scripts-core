@@ -14,7 +14,7 @@
 		"prestart": "npm run clean",
 		"clean": "rm -Rf out/* types/* browser/*",
 		"build": "tsc && npm run browser",
-		"browser": "webpack",
+		"browser": "node build-browser.js",
 		"prebuild": "npm run clean",
 		"prepare": "npm run build",
 		"publish-local": "npm run build && npm publish --access=public --registry http://localhost:4873/",
@@ -32,8 +32,6 @@
 	"license": "MIT",
 	"devDependencies": {
 		"phaser": "^3.70.0",
-		"typescript": "^5.2.2",
-		"webpack": "^5.89.0",
-		"webpack-cli": "^5.1.4"
+		"typescript": "^5.2.2"
 	}
 }
