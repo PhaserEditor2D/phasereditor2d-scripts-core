@@ -1,4 +1,5 @@
 node_modules/
 out/
+browser/
 .DS_Store
 package-lock.json

@@ -12,8 +12,9 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "tsc --watch",
 		"prestart": "npm run clean",
-		"clean": "rm -Rf out/* && rm -Rf types/*",
-		"build": "tsc",
+		"clean": "rm -Rf out/* types/* browser/*",
+		"build": "tsc && npm run browser",
+		"browser": "webpack",
 		"prebuild": "npm run clean",
 		"prepare": "npm run build",
 		"publish-local": "npm run build && npm publish --access=public --registry http://localhost:4873/",
@@ -31,6 +32,8 @@
 	"license": "MIT",
 	"devDependencies": {
 		"phaser": "^3.70.0",
-		"typescript": "^5.2.2"
+		"typescript": "^5.2.2",
+		"webpack": "^5.89.0",
+		"webpack-cli": "^5.1.4"
 	}
 }
