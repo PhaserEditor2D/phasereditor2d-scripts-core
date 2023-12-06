@@ -15,16 +15,6 @@ module.exports = {
         phaser: "Phaser"
     },
     optimization: {
-        concatenateModules: false,
-        minimize: false,
-        splitChunks: {
-            cacheGroups: {
-                phaser: {
-                    test: /[\\/]node_modules[\\/]phaser[\\/]/,
-                    name: "deps",
-                    chunks: "all",
-                }
-            }
-        }
+        minimize: false
     }
 };
