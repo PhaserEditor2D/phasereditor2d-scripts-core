@@ -51,12 +51,12 @@ const name = JSON.parse(
 	.replaceAll("/", "_")
 	.replaceAll("-", "_");
 
-fs.mkdirSync("browser/lib", { recursive: true });
+fs.mkdirSync(`browser/${name}/lib`, { recursive: true });
 
 const ORDER = [
 	"ScriptNode"
 ];
 
-concatFiles("out", `browser/lib/${name}.js`, ".js", ORDER);
-concatFiles("types", `browser/lib/${name}.d.ts`, ".d.ts", ORDER);
-copyFiles("src", "browser/", ".scene");
+concatFiles("out", `browser/${name}/lib/${name}.js`, ".js", ORDER);
+concatFiles("types", `browser/${name}/lib/${name}.d.ts`, ".d.ts", ORDER);
+copyFiles("src", `browser/${name}/`, ".scene");
