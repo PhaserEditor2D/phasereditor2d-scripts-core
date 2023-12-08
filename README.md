@@ -8,7 +8,7 @@ These script nodes are very basic and may fit on any Phaser Editor 2D project.
 
 The scripts are coded in TypeScript with ES modules.
 
-## Installing
+## Installing (NPM)
 
 Install this package in your game:
 
@@ -23,6 +23,11 @@ Also, you should add this package to the `phasereditor2d.config.json` file in yo
     "scripts": ["@phasereditor2d/scripts-code"]
 }
 ```
+
+## Installing (Vanilla JS)
+
+* Get the files in the [browser](./browser/) folder and copy them into your JavaScript project. It includes Phaser Editor 2D files, JavaScript files, and TypeScript type definitions.
+* Add a `script` tag to the `index.html` file to load the `lib/phasereditor2d_scripts_core.js` file.
 
 ## Summary
 

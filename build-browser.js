@@ -59,4 +59,4 @@ const ORDER = [
 
 concatFiles("out", `browser/lib/${name}.js`, ".js", ORDER);
 concatFiles("types", `browser/lib/${name}.d.ts`, ".d.ts", ORDER);
-copyFiles("src", "browser/lib", ".scene");
+copyFiles("src", "browser/", ".scene");
