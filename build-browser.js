@@ -44,12 +44,13 @@ function copyFiles(srcFolder, outFolder, ext) {
 	}
 }
 
-const name = JSON.parse(
-	fs.readFileSync("package.json"))
-	.name
+const packageData = JSON.parse(fs.readFileSync("package.json"));
+const name = packageData.name
 	.replaceAll("@", "")
 	.replaceAll("/", "_")
 	.replaceAll("-", "_");
+
+const version = packageData.version;
 
 fs.mkdirSync(`browser/${name}/lib`, { recursive: true });
 
@@ -57,6 +58,7 @@ const ORDER = [
 	"ScriptNode"
 ];
 
+fs.writeFileSync(`browser/${name}/version.txt`, version);
 concatFiles("out", `browser/${name}/lib/${name}.js`, ".js", ORDER);
 concatFiles("types", `browser/${name}/lib/${name}.d.ts`, ".d.ts", ORDER);
 copyFiles("src", `browser/${name}/`, ".scene");
