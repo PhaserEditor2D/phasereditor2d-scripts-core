@@ -17,12 +17,14 @@ function concatFiles(inputFolder, outputFilePath, ext, order) {
 
 	let output = "";
 
+	const exportDefaultReplace = ext === ".d.ts"? "declare " : "";
+
 	for (const file of files) {
 
 		const filepath = path.join(inputFolder, file);
 		let s = fs.readFileSync(filepath, 'utf-8');
 		s = s.replace(/import .*\n/g, "")
-			.replace(/export default /g, "")
+			.replace(/export default /g, exportDefaultReplace)
 			.replace(/export \{.*\n?/g, "");
 		output += s + "\n";
 	}
