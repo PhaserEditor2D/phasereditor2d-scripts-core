@@ -60,7 +60,7 @@ const ORDER = [
 	"ScriptNode"
 ];
 
-fs.writeFileSync(`browser/${name}/version.txt`, version);
+fs.writeFileSync(`browser/${name}/library.txt`, version);
 concatFiles("out", `browser/${name}/lib/${name}.js`, ".js", ORDER);
 concatFiles("types", `browser/${name}/lib/${name}.d.ts`, ".d.ts", ORDER);
 copyFiles("src", `browser/${name}/`, ".scene");
