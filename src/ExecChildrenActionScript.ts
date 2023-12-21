@@ -6,10 +6,9 @@
 import ScriptNode from "./ScriptNode";
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
-import ActionTargetComp from "./ActionTargetComp";
 /* END-USER-IMPORTS */
 
-export default class DestroyActionScript extends ScriptNode {
+export default class ExecChildrenActionScript extends ScriptNode {
 
 	constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene) {
 		super(parent);
@@ -23,9 +22,8 @@ export default class DestroyActionScript extends ScriptNode {
 
 	execute(...args: any[]): void {
 
-		const obj = this.getActionTargetObject(args);
 
-		obj?.destroy();
+		this.executeChildren(...args);
 	}
 
 	/* END-USER-CODE */

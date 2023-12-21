@@ -1,0 +1,36 @@
+{
+    "components": [
+        {
+            "name": "ActionTargetComp",
+            "displayName": "Action Target Config",
+            "baseClass": "",
+            "gameObjectType": "any",
+            "properties": [
+                {
+                    "name": "target",
+                    "label": "Target",
+                    "tooltip": "The target object of the action.",
+                    "defValue": "GAME_OBJECT",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "option",
+                        "options": [
+                            "GAME_OBJECT",
+                            "ARG_0",
+                            "ARG_1",
+                            "ARG_2"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - User Components Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.UserComponents"
+    },
+    "outputLang": "TYPE_SCRIPT",
+    "exportClass": true,
+    "autoImport": true
+}

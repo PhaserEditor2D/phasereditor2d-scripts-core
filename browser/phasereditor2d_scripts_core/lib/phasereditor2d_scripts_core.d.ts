@@ -4,6 +4,7 @@ declare class ScriptNode {
     private _parent;
     private _children?;
     constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene);
+    protected getActionTargetObject(args: any[]): any;
     get scene(): Phaser.Scene;
     get gameObject(): Phaser.GameObjects.GameObject | undefined;
     get parent(): Phaser.GameObjects.GameObject | Phaser.Scene | ScriptNode;
@@ -15,6 +16,14 @@ declare class ScriptNode {
     protected start(): void;
     protected update(): void;
     protected destroy(): void;
+}
+
+declare class ActionTargetComp {
+    constructor(gameObject: any);
+    static getComponent(gameObject: any): ActionTargetComp;
+    private gameObject;
+    target: "GAME_OBJECT" | "ARG_0" | "ARG_1" | "ARG_2";
+    static getTargetGameObject(scriptNode: ScriptNode, args: any[]): any;
 }
 
 declare class AlertActionScript extends ScriptNode {
@@ -50,6 +59,11 @@ declare class EmitEventActionScript extends ScriptNode {
 declare class ExecActionScript extends ScriptNode {
     constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene);
     targetAction: ScriptNode;
+    execute(...args: any[]): void;
+}
+
+declare class ExecChildrenActionScript extends ScriptNode {
+    constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene);
     execute(...args: any[]): void;
 }
 

@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import ActionTargetComp from "./ActionTargetComp";
 
 export default class ScriptNode {
 
@@ -73,6 +74,13 @@ export default class ScriptNode {
         }
     }
 
+    protected getActionTargetObject(args: any[]) {
+
+        const target = ActionTargetComp.getTargetGameObject(this, args);
+
+        return target;
+    }
+
     get scene() {
 
         return this._scene;
@@ -107,7 +115,7 @@ export default class ScriptNode {
 
         if (this._children) {
 
-            for(const child of this._children) {
+            for (const child of this._children) {
 
                 child.execute(...args);
             }

@@ -47,6 +47,10 @@ class ScriptNode {
             }
         }
     }
+    getActionTargetObject(args) {
+        const target = ActionTargetComp.getTargetGameObject(this, args);
+        return target;
+    }
     get scene() {
         return this._scene;
     }
@@ -88,6 +92,42 @@ class ScriptNode {
         // override this
     }
 }
+
+// You can write more code here
+/* END-USER-IMPORTS */
+class ActionTargetComp {
+    constructor(gameObject) {
+        this.gameObject = gameObject;
+        gameObject["__ActionTargetComp"] = this;
+        /* START-USER-CTR-CODE */
+        // Write your code here.
+        /* END-USER-CTR-CODE */
+    }
+    static getComponent(gameObject) {
+        return gameObject["__ActionTargetComp"];
+    }
+    gameObject;
+    target = "GAME_OBJECT";
+    /* START-USER-CODE */
+    static getTargetGameObject(scriptNode, args) {
+        const comp = ActionTargetComp.getComponent(scriptNode);
+        if (comp) {
+            switch (comp.target) {
+                case "GAME_OBJECT":
+                    return scriptNode.gameObject;
+                case "ARG_0":
+                    return args[0];
+                case "ARG_1":
+                    return args[1];
+                case "ARG_2":
+                    return args[2];
+            }
+        }
+        return scriptNode.gameObject;
+    }
+}
+/* END OF COMPILED CODE */
+// You can write more code here
 
 // You can write more code here
 /* START OF COMPILED CODE */
@@ -153,7 +193,6 @@ class ConsoleLogActionScript extends ScriptNode {
 
 // You can write more code here
 /* START OF COMPILED CODE */
-/* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 class DestroyActionScript extends ScriptNode {
     constructor(parent) {
@@ -164,7 +203,8 @@ class DestroyActionScript extends ScriptNode {
     }
     /* START-USER-CODE */
     execute(...args) {
-        this.gameObject?.destroy();
+        const obj = this.getActionTargetObject(args);
+        obj?.destroy();
     }
 }
 /* END OF COMPILED CODE */
@@ -234,6 +274,25 @@ class ExecActionScript extends ScriptNode {
         if (this.targetAction) {
             this.targetAction.execute(...args);
         }
+    }
+}
+/* END OF COMPILED CODE */
+// You can write more code here
+
+// You can write more code here
+/* START OF COMPILED CODE */
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
+class ExecChildrenActionScript extends ScriptNode {
+    constructor(parent) {
+        super(parent);
+        /* START-USER-CTR-CODE */
+        // Write your code here.
+        /* END-USER-CTR-CODE */
+    }
+    /* START-USER-CODE */
+    execute(...args) {
+        this.executeChildren(...args);
     }
 }
 /* END OF COMPILED CODE */
