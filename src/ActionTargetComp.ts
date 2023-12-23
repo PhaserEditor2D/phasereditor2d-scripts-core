@@ -22,7 +22,7 @@ export default class ActionTargetComp {
 	}
 
 	private gameObject: any;
-	public target: "GAME_OBJECT"|"ARG_0"|"ARG_1"|"ARG_2" = "GAME_OBJECT";
+	public target: "GAME_OBJECT" | "ARG_1" | "ARG_2" | "ARG_3" | "ARG_4" | "ARG_5" | "ARG_6" | "ARG_7" | "ARG_8" = "GAME_OBJECT";
 	public targetName: string = "";
 
 	/* START-USER-CODE */
@@ -33,23 +33,43 @@ export default class ActionTargetComp {
 
 		if (comp) {
 
-			switch(comp.target) {
+			switch (comp.target) {
 
 				case "GAME_OBJECT":
 
 					return scriptNode.gameObject;
 
-				case "ARG_0":
+				case "ARG_1":
 
 					return args[0];
 
-				case "ARG_1":
+				case "ARG_2":
 
 					return args[1];
 
-				case "ARG_2":
+				case "ARG_3":
 
 					return args[2];
+
+				case "ARG_4":
+
+					return args[3];
+
+				case "ARG_5":
+
+					return args[4];
+
+				case "ARG_6":
+
+					return args[5];
+
+				case "ARG_7":
+
+					return args[6];
+
+				case "ARG_8":
+
+					return args[7];
 			}
 		}
 
