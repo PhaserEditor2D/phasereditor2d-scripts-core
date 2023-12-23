@@ -23,6 +23,7 @@ export default class ActionTargetComp {
 
 	private gameObject: any;
 	public target: "GAME_OBJECT"|"ARG_0"|"ARG_1"|"ARG_2" = "GAME_OBJECT";
+	public targetName: string = "";
 
 	/* START-USER-CODE */
 

@@ -21,6 +21,16 @@
                             "ARG_2"
                         ]
                     }
+                },
+                {
+                    "name": "targetName",
+                    "label": "Target Name",
+                    "tooltip": "A display name for the target.",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
                 }
             ]
         }
