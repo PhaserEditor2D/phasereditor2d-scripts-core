@@ -12,5 +12,16 @@ export { default as RootScript } from "./RootScript";
 export { default as ScriptNode } from "./ScriptNode";
 export { default as SpriteScript } from "./SpriteScript";
 export { default as StartSceneActionScript } from "./StartSceneActionScript";
+
 export { default as ActionTargetComp } from "./ActionTargetComp";
 export { default as UserComponent } from "./UserComponent";
+export { default as AssignOpComp } from "./AssignOpComp";
+export { default as AddToParentActionScript } from "./AddToParentActionScript";
+export { default as ExecRandomActionScript } from "./ExecRandomActionScript";
+export { default as PlaySpriteAnimationActionScript } from "./PlaySpriteAnimationActionScript";
+export { default as SetAngleActionScript } from "./SetAngleActionScript";
+export { default as SetScaleXActionScript } from "./SetScaleXActionScript";
+export { default as SetScaleYActionScript } from "./SetScaleYActionScript";
+export { default as SetXActionScript } from "./SetXActionScript";
+export { default as SetYActionScript } from "./SetYActionScript";
+export { default as FlipActionScript } from "./FlipActionScript";

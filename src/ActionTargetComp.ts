@@ -22,7 +22,7 @@ export default class ActionTargetComp {
 	}
 
 	private gameObject: any;
-	public target: "GAME_OBJECT" | "ARG_1" | "ARG_2" | "ARG_3" | "ARG_4" | "ARG_5" | "ARG_6" | "ARG_7" | "ARG_8" = "GAME_OBJECT";
+	public target: "GAME_OBJECT"|"ARG_1"|"ARG_2"|"ARG_3"|"ARG_4"|"ARG_5"|"ARG_6"|"ARG_7"|"ARG_8" = "GAME_OBJECT";
 	public targetName: string = "";
 
 	/* START-USER-CODE */

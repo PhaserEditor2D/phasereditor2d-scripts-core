@@ -94,6 +94,17 @@ export default class OnEventScript extends ScriptNode {
 					});
 					break;
 			}
+
+			// If it is attached to a game object
+			// and the emitter isn't the game object
+			// then remove the listener
+			if (this.gameObject && this.eventEmitter !== "gameObject") {
+
+				this.gameObject.once(Phaser.GameObjects.Events.DESTROY, () => {
+
+					emitter?.off(this.eventName, this.executeChildren, this);
+				});
+			}
 		}
 	}
 
