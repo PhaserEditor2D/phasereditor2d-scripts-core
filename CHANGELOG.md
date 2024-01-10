@@ -1,4 +1,4 @@
-## dev
+## v1.1.0 - Jan 10, 2024
 
 * The OnEventScript removes the event if it's root is a game object and the game object is destroyed.
 * Add the new components:
