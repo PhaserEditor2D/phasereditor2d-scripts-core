@@ -1,3 +1,7 @@
+## v1.1.2 - Jan 11, 2024
+
+* Fixes build-browser script. Include .components files.
+
 ## v1.1.1 - Jan 11, 2024
 
 * Adds the SpawnActionScript.
