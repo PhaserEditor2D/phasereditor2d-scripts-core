@@ -76,6 +76,7 @@ Actions are scripts that are executed manually or by other nodes, like triggers 
 * **Set Scale X/Y Action** - set the X or Y of the game object's scale.
 * **Set X/Y Action** - set the scale X/Y of the game object's position.
 * **Set Flip Action** - flips the game object vertically or horizontally.
+* **Spawn Object Action** - spawns an object in the world.
 
 ## Target Action component
 
@@ -256,5 +257,13 @@ This action allows the **Action Target Config** component.
 ## Set Flip Action
 
 An action to set flip the game object. It looks into the **Flip Vertical** and **Flip Horizontal** properties. 
+
+This action allows the **Action Target Config** component.
+
+## Spawn Object Action
+
+This action creates an instance of the given **Object Prefab** and adds it to the world. If the **Spawn In Parent Position** parameter is checked, then it sets the position of the new object to the same position as the script's game object. 
+
+Finally, it executes the children nodes and passes the new object as the first argument.
 
 This action allows the **Action Target Config** component.
