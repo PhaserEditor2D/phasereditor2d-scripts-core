@@ -179,6 +179,13 @@ declare class SetYActionScript extends ScriptNode {
     execute(...args: any[]): void;
 }
 
+declare class SpawnActionScript extends ScriptNode {
+    constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene);
+    objectPrefab: any;
+    spawnInParentPosition: boolean;
+    execute(...args: any[]): void;
+}
+
 declare class SpriteScript extends ScriptNode {
     constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene);
     get gameObject(): Phaser.GameObjects.Sprite;

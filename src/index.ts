@@ -25,3 +25,4 @@ export { default as SetScaleYActionScript } from "./SetScaleYActionScript";
 export { default as SetXActionScript } from "./SetXActionScript";
 export { default as SetYActionScript } from "./SetYActionScript";
 export { default as FlipActionScript } from "./FlipActionScript";
+export { default as SpawnActionScript } from "./SpawnActionScript";
